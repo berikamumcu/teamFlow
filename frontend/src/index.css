@@ -1,0 +1,288 @@
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+body {
+  margin: 0;
+  background: #e1ecf6;
+  color: #111827;
+}
+
+
+
+
+
+/*sidebar*/
+.sidebar {
+  width: 230px;
+  background: #111827;
+  color: white;
+  padding: 24px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  color: #9ca3af;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.sidebar a:hover {
+  background: #1f2933;
+  color: white;
+}
+
+.sidebar a.active {
+  background: #2563eb;
+  color: white;
+}
+
+.content {
+  flex: 1;
+  padding: 32px;
+}
+
+
+
+/*users*/
+.user-card {
+  background: white;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"] {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 20px;
+  width: 260px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.user-form button {
+  background: #b8b6e2;
+  color: rgb(37, 5, 78);
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.user-form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(79, 70, 229, 0.25);
+}
+
+.user-form button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(79, 70, 229, 0.2);
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #dc2626;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  text-decoration: underline;
+}
+
+.user-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.update-btn {
+  background: transparent;
+  border: none;
+  color: #16a34a;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.update-btn:hover {
+  text-decoration: underline;
+}
+
+
+/*settings*/
+.setting-item {
+  margin: 20px 0;
+}
+
+.setting-item label {
+  font-weight: 500;
+}
+
+.summary {
+  margin-top: 30px;
+  padding: 15px;
+  background: #f3f4f6;
+  border-radius: 6px;
+}
+
+
+/* dark */
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f6fa;
+  color: #111;
+}
+
+.layout.dark {
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+.layout.dark .card {
+  background: #1e293b;
+}
+
+.layout.dark input,
+.layout.dark select {
+  background: #020617;
+  color: #f1f5f9;
+}
+
+.layout.dark .user-card,
+.layout.dark .user-info {
+  color: #111;
+}
+
+.layout.dark .summary {
+  color: #111;
+}
+
+
+
+
+/* PROJECTS PAGE */
+.projects-page h2 {
+  margin-bottom: 16px;
+}
+
+.project-form {
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  max-width: 400px;
+}
+
+.project-form input,
+.project-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.project-form button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+}
+
+.project-form button:hover {
+  opacity: 0.9;
+}
+
+
+/* PROJECT LIST */
+.projects-page {
+  min-height: 100vh;
+
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+}
+
+.project-name {
+  font-weight: 500;
+}
+
+
+/* STATUS BADGES */
+.status-badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: white;
+}
+
+.status-badge.planned {
+  background: #9ca3af;
+}
+
+.status-badge.active {
+  background: #22c55e;
+}
+
+.status-badge.completed {
+  background: #3b82f6;
+}
+
+
+.project-card .delete-btn {
+  background: transparent;
+  border: none;
+  color: #dc2626;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.project-card .delete-btn:hover {
+  text-decoration: underline;
+}
